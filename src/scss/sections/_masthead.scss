@@ -1,17 +1,18 @@
-// 
+//
 // Masthead
-// 
+//
 
 header.masthead {
     position: relative;
     overflow: hidden;
     padding-top: calc(7rem + 72px);
     padding-bottom: 7rem;
-    background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+    //background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+    background: url(../../assets/img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
-    background-size: cover;
+    //background-size: cover;
 
     .masthead-content {
         z-index: 1;
@@ -27,6 +28,7 @@ header.masthead {
     }
 
     .bg-circle {
+        display: none;
         z-index: 0;
         position: absolute;
         border-radius: 100%;
