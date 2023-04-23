@@ -17,3 +17,15 @@ html {
     border-radius: 4px;
     margin-right: 10px;
 }
+
+.img-fluid.rounded-circle {
+    transition: all .2s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+footer {
+    background: #212529;
+}

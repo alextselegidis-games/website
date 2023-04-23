@@ -5,8 +5,8 @@ html(lang='en')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='Collection of games that were fun to make and fun to play.')
+        meta(name='author', content='Alex Tselegidis')
 
         title Alex Tselegidis Games
 
@@ -27,14 +27,16 @@ html(lang='en')
         // Navigation
         nav.navbar.navbar-expand-lg.navbar-dark.navbar-custom.fixed-top
             .container.px-5
-                img.header-logo(src='assets/img/logo.svg', alt='...')
-                a.navbar-brand(href='#page-top') Games
+                img.header-logo(src='assets/img/logo.png', alt='...')
+                a.navbar-brand(href='#page-top')
                 button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     span.navbar-toggler-icon
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto
                         li.nav-item
-                            a.nav-link(href='https://github.com/orgs/alextselegidis-games') GitHub
+                            a.nav-link(href='https://github.com/orgs/alextselegidis-games',target='_blank')
+                                i.fab.fa-github.me-2
+                                | GitHub
 
         // Header
         header.masthead.text-center.text-white
@@ -42,7 +44,7 @@ html(lang='en')
                 .container.px-5
                     h1.masthead-heading.mb-0 Indie Projects Ahead!
                     h2.masthead-subheading.mb-0 Fun to make, fun to play.
-                    a.btn.btn-primary.btn-xl.rounded-pill.mt-5(href='#scroll') Learn More
+                    //a.btn.btn-primary.btn-xl.rounded-pill.mt-5(href='#scroll') Learn More
             .bg-circle-1.bg-circle
             .bg-circle-2.bg-circle
             .bg-circle-3.bg-circle
@@ -54,12 +56,15 @@ html(lang='en')
                 .row.gx-5.align-items-center
                     .col-lg-6.order-lg-2
                         .p-5
-                            img.img-fluid.rounded-circle(src='assets/img/01.jpg', alt='...')
+                            img.img-fluid.rounded-circle(src='assets/img/riddlemania-bg.jpg', alt='...')
                     .col-lg-6.order-lg-1
                         .p-5
-                            h2.display-4 Riddlemania
+                            h2.display-4.d-flex.align-items-center
+                                | Riddlemania
                             p
                                 | Challenge your riddle solving skills with these tricky brain teasers.
+                            a.btn.btn-primary.btn-xs.w-25.rounded-pill.mt-2(href='/riddlemania',target=_blank) Play
+
 
         // Content section 2
         section
@@ -67,12 +72,14 @@ html(lang='en')
                 .row.gx-5.align-items-center
                     .col-lg-6
                         .p-5
-                            img.img-fluid.rounded-circle(src='assets/img/02.jpg', alt='...')
+                            img.img-fluid.rounded-circle(src='assets/img/guessmess-bg.jpg', alt='...')
                     .col-lg-6
                         .p-5
-                            h2.display-4 Guess Mess!
+                            h2.display-4.d-flex.align-items-center
+                                | Guess Mess!
                             p
                                 | How well do you know your friends? Guess their answers right and win the game.
+                            a.btn.btn-primary.btn-xs.w-25.rounded-pill.mt-2(href='/guessmess',target=_blank) Play
 
         // Content section 3
         section
@@ -80,20 +87,50 @@ html(lang='en')
                 .row.gx-5.align-items-center
                     .col-lg-6.order-lg-2
                         .p-5
-                            img.img-fluid.rounded-circle(src='assets/img/03.jpg', alt='...')
+                            img.img-fluid.rounded-circle(src='assets/img/spaceguard-bg.jpg', alt='...')
                     .col-lg-6.order-lg-1
                         .p-5
-                            h2.display-4 Spaceguard
+                            h2.display-4.d-flex.align-items-center
+                                | Spaceguard
                             p
                                 | Protect your mother spaceship from those nasty space meteor storms.
+                            a.btn.btn-primary.btn-xs.w-25.rounded-pill.mt-2(href='/spaceguard',target=_blank) Play
 
         // Footer
-        footer.py-5.bg-black
-            .container.px-5
-                p.m-0.text-center.text-white.small Copyright &copy; Alex Tselegidis 2023
+        .d-flex.flex-column.h-100
+          // FOOTER
+          footer.w-100.py-4.flex-shrink-0
+            .container.py-4
+              .row.gy-4.gx-5
+                .col-lg-4.col-md-6
+                  h5.text-white AT
+                  p.small.text-muted
+                    | Open sources games that were fun to make and fun to play. Alex Tselegidis &copy; 2023 All rights reserved.
+                .col-lg-4.col-md-6
+                  h5.text-white.mb-3 Feedback
+                  p.small.text-muted
+                    | Feel free to drop your message to info@alextselegidis.com with your feedback.
+                .col-lg-4.col-md-6
+                  h5.text-white.mb-3 Quick links
+                  ul.list-unstyled.text-muted
+                    li
+                      a.text-white(href='https://github.com/alextselegidis-games') GitHub
+                    li
+                      a.text-white(href='https://phaser.io/') Phaser
+                    li
+                      a.text-white(href='https://itch.io/game-assets') Resources
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
 
         // Core theme JS
         script(src='js/scripts.js')
+
+        // Google tag (gtag.js)
+        script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-048X2EG9K6')
+        script.
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-048X2EG9K6');
+
